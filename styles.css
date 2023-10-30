@@ -9,8 +9,8 @@ body {
 }
 
 .main-container {
-  height: 80vh;
-  width: 30vw;
+  height: 30rem;
+  width: 25rem;
   margin-top: 5vh;
   background-color: lightgray;
   border: 1px solid black;
@@ -20,8 +20,8 @@ body {
 
 .main-container-display {
   background-color: white;
-  height: 10vh;
-  width: 25vw;
+  height: 4rem;
+  width: 21rem;
   border: 1px solid black;
   margin-top: 5vh;
   display: flex;
@@ -32,4 +32,6 @@ body {
 .main-container-display-text {
   margin-bottom: 1rem;
   margin-right: 1rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
 }

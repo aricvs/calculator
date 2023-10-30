@@ -37,6 +37,12 @@ body {
   font-size: 1.5rem;
 }
 
+.digits-operators-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .digits-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -47,9 +53,17 @@ body {
   flex-direction: column;
 }
 
-.digit,
-.operator,
+.specials-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .special {
+  height: 3rem;
+}
+
+.digit,
+.operator {
   width: 5rem;
   height: 3rem;
 }

@@ -45,6 +45,16 @@ body {
   gap: 1rem;
 }
 
+.main-container-keys-digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container-keys-operators {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .main-container-keys-key {
   border: 1px solid black;
   background-color: white;

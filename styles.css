@@ -22,7 +22,7 @@ body {
   padding: 1.5rem;
 }
 
-.main-container-display {
+.display {
   background-color: white;
   height: 4rem;
   width: 21rem;
@@ -32,7 +32,7 @@ body {
   align-items: flex-end;
 }
 
-.main-container-display-text {
+.display-text {
   margin-bottom: 1rem;
   margin-right: 1rem;
   font-size: 1.5rem;

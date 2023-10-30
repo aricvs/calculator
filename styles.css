@@ -11,13 +11,14 @@ body {
 
 .main-container {
   height: 30rem;
-  width: 25rem;
+  width: 22rem;
   margin-top: 1rem;
   background-color: lightgray;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 1.5rem;
 }
 
 .main-container-display {
@@ -25,7 +26,6 @@ body {
   height: 4rem;
   width: 21rem;
   border: 1px solid black;
-  margin-top: 2rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -40,7 +40,6 @@ body {
 .main-container-keys {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 2rem;
   gap: 1rem;
 }
@@ -48,6 +47,11 @@ body {
 .main-container-keys-digits {
   display: flex;
   flex-wrap: wrap;
+}
+
+.main-container-keys-digits-row {
+  display: flex;
+  width: 100%;
 }
 
 .main-container-keys-operators {

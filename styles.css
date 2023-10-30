@@ -9,4 +9,12 @@ body {
   width: 30vw;
   margin-top: 5vh;
   background-color: lightgray;
+  border: 1px solid black;
+}
+
+.main-container-display {
+  background-color: white;
+  height: 7vh;
+  width: 25vw;
+  border: 1px solid black;
 }

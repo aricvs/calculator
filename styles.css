@@ -72,8 +72,12 @@ body {
   font-size: 2rem;
 }
 
-.main-container-keys-key:hover {
-  background-color: darkgrey;
+.digit {
+  background-color: lightblue;
+}
+
+.digit:hover {
+  background-color: rgb(55, 177, 218);
 }
 
 .main-container-keys-key:active {

@@ -24,4 +24,12 @@ body {
   width: 25vw;
   border: 1px solid black;
   margin-top: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.main-container-display-text {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }

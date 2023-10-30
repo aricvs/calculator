@@ -46,3 +46,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.digit,
+.operator {
+  width: 5rem;
+  height: 3rem;
+}

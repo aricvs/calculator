@@ -58,3 +58,7 @@ body {
 .main-container-keys-key:hover {
   background-color: gray;
 }
+
+.main-container-keys-key:active {
+  background-color: darkgrey;
+}

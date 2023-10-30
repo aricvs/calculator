@@ -17,6 +17,7 @@ body {
   border: 1px solid black;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 1.5rem;
 }
@@ -40,7 +41,6 @@ body {
 .main-container-keys {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .main-container-keys-digits {

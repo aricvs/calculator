@@ -40,7 +40,6 @@ body {
 .main-container-keys {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem;
   gap: 1rem;
 }
 

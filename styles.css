@@ -10,6 +10,8 @@ body {
   margin-top: 5vh;
   background-color: lightgray;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container-display {
@@ -17,4 +19,5 @@ body {
   height: 7vh;
   width: 25vw;
   border: 1px solid black;
+  margin-top: 5vh;
 }

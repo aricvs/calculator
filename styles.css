@@ -50,9 +50,21 @@ body {
 
 .buttons-container > button {
   font-size: 1.5rem;
+  border: 1px solid black;
 }
 
-.zero {
-  grid-column-start: 1;
-  grid-column-end: 3;
+.clear {
+  background-color: red;
+}
+
+.equals {
+  background-color: green;
+}
+
+.digit {
+  background-color: lightblue;
+}
+
+.operator {
+  background-color: yellow;
 }

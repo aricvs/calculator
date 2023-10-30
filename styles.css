@@ -48,7 +48,8 @@ body {
 }
 
 .digit,
-.operator {
+.operator,
+.special {
   width: 5rem;
   height: 3rem;
 }

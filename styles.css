@@ -1,5 +1,6 @@
 * {
   border-radius: 1rem;
+  font-family: sans-serif;
 }
 
 body {
@@ -33,10 +34,18 @@ body {
 .main-container-display-text {
   margin-bottom: 1rem;
   margin-right: 1rem;
-  font-family: sans-serif;
   font-size: 1.5rem;
 }
 
 .main-container-keys {
   display: flex;
+}
+
+.main-container-keys-key {
+  border: 1px solid black;
+  height: 2rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

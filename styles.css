@@ -37,6 +37,11 @@ body {
   font-size: 1.5rem;
 }
 
+.digits-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .operators-container {
   display: flex;
   flex-direction: column;

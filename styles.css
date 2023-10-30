@@ -16,6 +16,7 @@ body {
   border: 1px solid black;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .main-container-display {
@@ -36,7 +37,6 @@ body {
   font-size: 1.5rem;
 }
 
-.main-container-display-keys {
+.main-container-keys {
   display: flex;
-  flex-wrap: wrap;
 }

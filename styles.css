@@ -53,18 +53,18 @@ body {
   border: 1px solid black;
 }
 
+.digit {
+  background-color: aquamarine;
+}
+
 .clear {
-  background-color: red;
+  background-color: orangered;
 }
 
 .equals {
-  background-color: green;
-}
-
-.digit {
-  background-color: lightblue;
+  background-color: gold;
 }
 
 .operator {
-  background-color: yellow;
+  background-color: moccasin;
 }

@@ -55,16 +55,37 @@ body {
 
 .digit {
   background-color: aquamarine;
+  cursor: pointer;
+}
+
+.digit:active {
+  background-color: aquamarine;
+  background-color: rgb(0, 168, 109);
 }
 
 .clear {
   background-color: orangered;
+  cursor: pointer;
+}
+
+.clear:active {
+  background-color: rgb(138, 37, 0);
 }
 
 .equals {
   background-color: gold;
+  cursor: pointer;
+}
+
+.equals:active {
+  background-color: rgb(133, 113, 1);
 }
 
 .operator {
   background-color: moccasin;
+  cursor: pointer;
+}
+
+.operator:active {
+  background-color: rgb(116, 103, 82);
 }

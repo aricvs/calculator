@@ -28,3 +28,14 @@ function operate(operator, num1, num2) {
     return divide(num1, num2);
   }
 }
+
+function fillDisplay() {
+  buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log(button.textContent);
+    });
+  });
+}
+
+fillDisplay();

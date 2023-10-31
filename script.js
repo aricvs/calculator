@@ -30,10 +30,11 @@ function operate(operator, num1, num2) {
 }
 
 function fillDisplay() {
-  buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll("button");
+  const display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log(button.textContent);
+      display.textContent += button.textContent;
     });
   });
 }

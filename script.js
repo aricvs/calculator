@@ -41,4 +41,13 @@ function fillDisplay() {
   });
 }
 
+function clear() {
+  const clearBtn = document.querySelector(".clear");
+  const display = document.querySelector(".display-text");
+  clearBtn.addEventListener("click", () => {
+    display.textContent = "";
+  });
+}
+
 fillDisplay();
+clear();

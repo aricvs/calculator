@@ -34,7 +34,9 @@ function fillDisplay() {
   const display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      display.textContent += button.textContent;
+      if (display.textContent.length < 13) {
+        display.textContent += button.textContent;
+      }
     });
   });
 }

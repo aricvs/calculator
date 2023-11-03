@@ -32,8 +32,9 @@ function operate(operator, num1, num2) {
   }
 }
 
+// TODO: don't let two operators be logged in a row
 function fillDisplay() {
-  const buttons = document.querySelectorAll(".digit");
+  const buttons = document.querySelectorAll(".non-equals");
   const display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -56,8 +57,7 @@ function getResult() {
   const equalsBtn = document.querySelector(".equals");
   const display = document.querySelector(".display-text");
   equalsBtn.addEventListener("click", () => {
-    // TODO: add functionality
-    return;
+    console.log(display.textContent);
   });
 }
 

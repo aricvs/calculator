@@ -32,7 +32,6 @@ function operate(operator, num1, num2) {
   }
 }
 
-// TODO: don't let two operators be logged in a row
 function fillDisplay() {
   const buttons = document.querySelectorAll(".non-equals");
   const display = document.querySelector(".display-text");

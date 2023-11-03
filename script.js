@@ -1,3 +1,5 @@
+const currentOperation = {};
+
 function add(num1, num2) {
   return num1 + num2;
 }
@@ -59,6 +61,7 @@ function clear() {
   const display = document.querySelector(".display-text");
   clearBtn.addEventListener("click", () => {
     display.textContent = "";
+    currentOperation = {};
   });
 }
 

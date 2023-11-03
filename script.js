@@ -34,6 +34,7 @@ function operate(operator, num1, num2) {
   }
 }
 
+// TODO: add a toggle to check if it's num1 or num2, maybe globalize it
 function fillDisplayDigits() {
   const buttons = document.querySelectorAll(".digit");
   let display = document.querySelector(".display-text");
@@ -53,7 +54,6 @@ function fillDisplayOperator() {
     button.addEventListener("click", () => {
       currentOperation.num1 = Number(display.textContent);
       currentOperation.operator = button.textContent;
-      display.textContent = "";
       console.log(currentOperation);
     });
   });

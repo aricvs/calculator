@@ -33,7 +33,7 @@ function operate(operator, num1, num2) {
 }
 
 function fillDisplay() {
-  const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll(".non-equals");
   const display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {

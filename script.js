@@ -1,4 +1,4 @@
-const currentOperation = {};
+let currentOperation = {};
 
 function add(num1, num2) {
   return num1 + num2;
@@ -36,7 +36,7 @@ function operate(operator, num1, num2) {
 
 function fillDisplayDigits() {
   const buttons = document.querySelectorAll(".digit");
-  const display = document.querySelector(".display-text");
+  let display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (display.textContent.length < 13) {
@@ -48,26 +48,34 @@ function fillDisplayDigits() {
 
 function fillDisplayOperator() {
   const buttons = document.querySelectorAll(".operator");
-  const display = document.querySelector(".display-text");
+  let display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      return;
+      currentOperation.num1 = Number(display.textContent);
+      currentOperation.operator = button.textContent;
+      display.textContent = "";
+      console.log(currentOperation);
     });
   });
 }
 
 function clear() {
+  let display = document.querySelector(".display-text");
+  display.textContent = "";
+  currentOperation = {};
+}
+
+function clearPress() {
   const clearBtn = document.querySelector(".clear");
-  const display = document.querySelector(".display-text");
+  let display = document.querySelector(".display-text");
   clearBtn.addEventListener("click", () => {
-    display.textContent = "";
-    currentOperation = {};
+    clear();
   });
 }
 
 function getResult() {
   const equalsBtn = document.querySelector(".equals");
-  const display = document.querySelector(".display-text");
+  let display = document.querySelector(".display-text");
   equalsBtn.addEventListener("click", () => {
     console.log(display.textContent);
   });
@@ -76,4 +84,4 @@ function getResult() {
 fillDisplayDigits();
 fillDisplayOperator();
 getResult();
-clear();
+clearPress();

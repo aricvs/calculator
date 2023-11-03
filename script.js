@@ -52,5 +52,14 @@ function clear() {
   });
 }
 
+function getResult() {
+  const equalsBtn = document.querySelector(".equals");
+  const display = document.querySelector(".display-text");
+  equalsBtn.addEventListener("click", () => {
+    console.log(display.textContent);
+  });
+}
+
 fillDisplay();
+getResult();
 clear();

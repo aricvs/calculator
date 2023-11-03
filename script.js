@@ -32,14 +32,24 @@ function operate(operator, num1, num2) {
   }
 }
 
-function fillDisplay() {
-  const buttons = document.querySelectorAll(".non-equals");
+function fillDisplayDigits() {
+  const buttons = document.querySelectorAll(".digit");
   const display = document.querySelector(".display-text");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (display.textContent.length < 13) {
         display.textContent += button.textContent;
       }
+    });
+  });
+}
+
+function fillDisplayOperator() {
+  const buttons = document.querySelectorAll(".operator");
+  const display = document.querySelector(".display-text");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      return;
     });
   });
 }
@@ -60,6 +70,7 @@ function getResult() {
   });
 }
 
-fillDisplay();
+fillDisplayDigits();
+fillDisplayOperator();
 getResult();
 clear();

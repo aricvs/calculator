@@ -59,6 +59,8 @@ function pressOperationBtn() {
   operationBtns.forEach((button) => {
     button.addEventListener("click", () => {
       currentOperation.operator = button.textContent;
+      display.textContent = "";
+      numberToggle = "numberTwo";
     });
   });
 }

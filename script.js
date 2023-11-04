@@ -67,13 +67,15 @@ function pressOperationBtn() {
 
 function pressEqualBtn() {
   const equalBtn = document.querySelector(".equals");
+  const display = document.querySelector(".display-text");
   equalBtn.addEventListener("click", () => {
     const result = operate(
       currentOperation.operator,
       currentOperation.num1,
       currentOperation.num2
     );
-    document.querySelector(".display-text").textContent = result;
+    display.textContent = result;
+    currentOperation.num1 = Number(display.textContent);
   });
 }
 

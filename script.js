@@ -1,4 +1,6 @@
-let currentOperation = { num1: "", operator: "", num2: "" };
+let total;
+let operand;
+let nextNumber;
 
 function add(num1, num2) {
   return num1 + num2;

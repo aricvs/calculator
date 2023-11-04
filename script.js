@@ -34,32 +34,25 @@ function operate(operator, num1, num2) {
   }
 }
 
-function getEqual() {
-  const result = operate(
-    currentOperation.operator,
-    currentOperation.num1,
-    currentOperation.num2
-  );
-  document.querySelector(".display-text").textContent = result;
-}
-
 function pressEqualBtn() {
   const equalBtn = document.querySelector(".equals");
   equalBtn.addEventListener("click", () => {
-    getEqual();
+    const result = operate(
+      currentOperation.operator,
+      currentOperation.num1,
+      currentOperation.num2
+    );
+    document.querySelector(".display-text").textContent = result;
   });
-}
-
-function clear() {
-  document.querySelector(".display-text").textContent = "";
-  currentOperation = {};
 }
 
 function pressClearBtn() {
   const clearBtn = document.querySelector(".clear");
   clearBtn.addEventListener("click", () => {
-    clear();
+    document.querySelector(".display-text").textContent = "";
+    currentOperation = {};
   });
 }
 
 pressEqualBtn();
+pressClearBtn();

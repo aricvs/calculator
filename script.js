@@ -1,5 +1,5 @@
 let currentOperation = { num1: 0, operator: "", num2: 0 };
-let toggleNum = "num1";
+let displayValue;
 
 function add(num1, num2) {
   return num1 + num2;
@@ -42,6 +42,7 @@ function pressDigitBtn() {
   digitBtns.forEach((button) => {
     button.addEventListener("click", () => {
       display.textContent += button.textContent;
+      displayValue = Number(display.textContent);
     });
   });
 }

@@ -1,5 +1,5 @@
 let currentOperation = { num1: 0, operator: "", num2: 0 };
-let displayValue;
+let numberToggle = "numberOne";
 
 function add(num1, num2) {
   return num1 + num2;
@@ -42,9 +42,16 @@ function pressDigitBtn() {
   digitBtns.forEach((button) => {
     button.addEventListener("click", () => {
       display.textContent += button.textContent;
-      displayValue = Number(display.textContent);
+      if (numberToggle === "numberOne") {
+        currentOperation.num1 = Number(display.textContent);
+      }
     });
   });
+}
+
+function pressOperationBtn() {
+  const operationBtns = document.querySelectorAll(".operator");
+  const display = document.querySelector(".display-text");
 }
 
 function pressEqualBtn() {

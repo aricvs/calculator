@@ -44,9 +44,21 @@ function getEqual() {
 }
 
 function pressEqualBtn() {
-  equalBtn = document.querySelector(".equals");
+  const equalBtn = document.querySelector(".equals");
   equalBtn.addEventListener("click", () => {
     getEqual();
+  });
+}
+
+function clear() {
+  document.querySelector(".display-text").textContent = "";
+  currentOperation = {};
+}
+
+function pressClearBtn() {
+  const clearBtn = document.querySelector(".clear");
+  clearBtn.addEventListener("click", () => {
+    clear();
   });
 }
 

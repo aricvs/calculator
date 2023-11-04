@@ -45,6 +45,9 @@ function pressDigitBtn() {
       if (numberToggle === "numberOne") {
         currentOperation.num1 = Number(display.textContent);
       }
+      if (numberToggle === "numberTwo") {
+        currentOperation.num2 = Number(display.textContent);
+      }
     });
   });
 }
@@ -52,6 +55,12 @@ function pressDigitBtn() {
 function pressOperationBtn() {
   const operationBtns = document.querySelectorAll(".operator");
   const display = document.querySelector(".display-text");
+
+  operationBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      currentOperation.operator = button.textContent;
+    });
+  });
 }
 
 function pressEqualBtn() {
@@ -70,10 +79,12 @@ function pressClearBtn() {
   const clearBtn = document.querySelector(".clear");
   clearBtn.addEventListener("click", () => {
     document.querySelector(".display-text").textContent = "";
-    currentOperation = {};
+    numberToggle = "numberOne";
+    currentOperation = { num1: 0, operator: "", num2: 0 };
   });
 }
 
 pressDigitBtn();
+pressOperationBtn();
 pressEqualBtn();
 pressClearBtn();

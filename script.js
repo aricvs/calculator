@@ -1,4 +1,4 @@
-let currentOperation = { num1: 0, operator: "", num2: 0 };
+let currentOperation = { num1: "", operator: "", num2: "" };
 let numberToggle = "numberOne";
 
 function add(num1, num2) {
@@ -84,7 +84,7 @@ function pressClearBtn() {
   clearBtn.addEventListener("click", () => {
     document.querySelector(".display-text").textContent = "";
     numberToggle = "numberOne";
-    currentOperation = { num1: 0, operator: "", num2: 0 };
+    currentOperation = { num1: "", operator: "", num2: "" };
   });
 }
 

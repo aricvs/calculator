@@ -42,3 +42,12 @@ function getEqual() {
   );
   document.querySelector(".display-text").textContent = result;
 }
+
+function pressEqualBtn() {
+  equalBtn = document.querySelector(".equals");
+  equalBtn.addEventListener("click", () => {
+    getEqual();
+  });
+}
+
+pressEqualBtn();

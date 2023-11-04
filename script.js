@@ -33,3 +33,12 @@ function operate(operator, num1, num2) {
     return divide(num1, num2);
   }
 }
+
+function getEqual() {
+  const result = operate(
+    currentOperation.operator,
+    currentOperation.num1,
+    currentOperation.num2
+  );
+  document.querySelector(".display-text").textContent = result;
+}

@@ -2,6 +2,7 @@ let total;
 let operand;
 let nextNumber;
 let operation = [];
+const display = document.querySelector(".display-text");
 
 function add(num1, num2) {
   return num1 + num2;
@@ -38,8 +39,7 @@ function operate(num1, operator, num2) {
 }
 
 function digitClick() {
-  let display = document.querySelector(".display-text");
-  let digitBtns = document.querySelectorAll(".digit");
+  const digitBtns = document.querySelectorAll(".digit");
 
   digitBtns.forEach((digit) => {
     digit.addEventListener("click", () => {
@@ -48,4 +48,17 @@ function digitClick() {
   });
 }
 
+function operatorClick() {
+  const operatorBtns = document.querySelectorAll(".operator");
+
+  operatorBtns.forEach((operand) => {
+    operand.addEventListener("click", () => {
+      operation.push(Number(display.textContent));
+      operation.push(operand.textContent);
+      display.textContent = "";
+    });
+  });
+}
+
 digitClick();
+operatorClick();

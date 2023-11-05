@@ -5,6 +5,9 @@ const operatorBtns = document.querySelectorAll(".operator");
 const equalsBtn = document.querySelector(".equals");
 const clearBtn = document.querySelector(".clear");
 
+// global variables of operations
+let currentOperation = { num1: null, operator: null, num2: null };
+
 // basic operation functions
 function add(num1, num2) {
   return num1 + num2;

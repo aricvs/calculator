@@ -80,15 +80,18 @@ function clickOperatorBtn() {
   });
 }
 
-// assigns display value to num2 and run operate function on current values, displaying result value in visor
+// assigns display value to num2 and run operate function on current values, displaying result value in visor, rounds decimal numbers
 function clickEqualsBtn() {
   equalsBtn.addEventListener("click", () => {
     currentOperation.num2 = parseFloat(display.textContent);
-    display.textContent = operate(
-      currentOperation.num1,
-      currentOperation.operator,
-      currentOperation.num2
-    );
+    display.textContent =
+      Math.round(
+        operate(
+          currentOperation.num1,
+          currentOperation.operator,
+          currentOperation.num2
+        ) * 100
+      ) / 100;
     currentOperation.num1 = display.textContent;
     currentOperation.operator = null;
     currentOperation.num2 = null;

@@ -57,9 +57,23 @@ function clickDigitBtn() {
 function clickOperatorBtn() {
   operatorBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      currentOperation.operator = btn.textContent;
-      currentOperation.num1 = Number(display.textContent);
-      display.textContent = "";
+      if (currentOperation.operator !== null) {
+        currentOperation.num2 = Number(display.textContent);
+        currentOperation.num1 = operate(
+          currentOperation.num1,
+          currentOperation.operator,
+          currentOperation.num2
+        );
+        currentOperation.operator = btn.textContent;
+        currentOperation.num2 = null;
+        display.textContent = "";
+      }
+
+      if (currentOperation.operator === null) {
+        currentOperation.operator = btn.textContent;
+        currentOperation.num1 = Number(display.textContent);
+        display.textContent = "";
+      }
     });
   });
 }

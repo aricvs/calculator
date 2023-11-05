@@ -82,5 +82,13 @@ function clickOperatorBtn() {
   });
 }
 
+// runs the operate function on the current numbers/operator and shows it on display
+function clickEqualsBtn() {
+  equalsBtn.addEventListener("click", () => {
+    display.textContent = operate(currentNumber, currentOperator, nextNumber);
+  });
+}
+
 clickDigitBtn();
 clickOperatorBtn();
+clickEqualsBtn();

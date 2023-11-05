@@ -83,7 +83,9 @@ function clickOperatorBtn() {
 // assigns display value to num2 and run operate function on current values, displaying result value in visor, rounds decimal numbers
 function clickEqualsBtn() {
   equalsBtn.addEventListener("click", () => {
-    if (display.textContent === "") {
+    if (currentOperation.operator === null && currentOperation.num2 === null) {
+      display.textContent = currentOperation.num1;
+    } else if (display.textContent === "") {
       display.textContent = currentOperation.num1;
     } else {
       currentOperation.num2 = parseFloat(display.textContent);

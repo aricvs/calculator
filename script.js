@@ -43,3 +43,14 @@ function operate(num1, operator, num2) {
     return divide(num1, num2);
   }
 }
+
+// function to display the typed numbers
+function clickDigitBtn() {
+  digitBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      display.textContent += btn.textContent;
+    });
+  });
+}
+
+clickDigitBtn();

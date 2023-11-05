@@ -53,20 +53,28 @@ function clickDigitBtn() {
   });
 }
 
-// TODO: when operator is clicked, log display to number 1
-
+// check if operator is empty, if yes, then assign displayt value to num1 and wait for equals to be run, else operate the current values
+// TODO: fix chain operations
 function clickOperatorBtn() {
   operatorBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      if (!currentOperation.num1) {
+      if (currentOperation.num2 === null) {
         currentOperation.num1 = Number(display.textContent);
         currentOperation.operator = btn.textContent;
         display.textContent = "";
+      } else {
+        display.textContent = operate(
+          currentOperation.num1,
+          currentOperation.operator,
+          currentOperation.num2
+        );
+        currentOperation.operator = btn.textContent;
       }
     });
   });
 }
 
+// assigns display value to num2 and run operate function on current values, displaying result value in visor
 function clickEqualsBtn() {
   equalsBtn.addEventListener("click", () => {
     currentOperation.num2 = Number(display.textContent);

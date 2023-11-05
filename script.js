@@ -47,11 +47,14 @@ function operate(num1, operator, num2) {
 }
 
 // makes clicked digits show up on the display, converts them to numbers as well
+// TODO: log clicked digits to number variables
+// TODO: add a way to detect current number and assign to next number
 // TODO: limit amount of digits to not overflow display size
 function clickDigitBtn() {
   digitBtns.forEach((digit) => {
     digit.addEventListener("click", () => {
       display.textContent += Number(digit.textContent);
+      currentNumber = Number(display.textContent);
     });
   });
 }

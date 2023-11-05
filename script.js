@@ -1,4 +1,9 @@
+// global DOM elements
 const display = document.querySelector(".display-text");
+const digitBtns = document.querySelectorAll(".digit");
+const operatorBtns = document.querySelectorAll(".operator");
+const equalsBtn = document.querySelector(".equal");
+const clearBtn = document.querySelector(".clear");
 
 function add(num1, num2) {
   return num1 + num2;

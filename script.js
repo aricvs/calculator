@@ -87,6 +87,9 @@ function clickEqualsBtn() {
       currentOperation.operator,
       currentOperation.num2
     );
+    currentOperation.num1 = display.textContent;
+    currentOperation.operator = null;
+    currentOperation.num2 = null;
   });
 }
 

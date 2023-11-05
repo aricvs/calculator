@@ -60,7 +60,7 @@ function clickOperatorBtn() {
   operatorBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (currentOperation.operator !== null) {
-        currentOperation.num2 = Number(display.textContent);
+        currentOperation.num2 = parseFloat(display.textContent);
         currentOperation.num1 = operate(
           currentOperation.num1,
           currentOperation.operator,
@@ -73,7 +73,7 @@ function clickOperatorBtn() {
 
       if (currentOperation.operator === null) {
         currentOperation.operator = btn.textContent;
-        currentOperation.num1 = Number(display.textContent);
+        currentOperation.num1 = parseFloat(display.textContent);
         display.textContent = "";
       }
     });
@@ -83,7 +83,7 @@ function clickOperatorBtn() {
 // assigns display value to num2 and run operate function on current values, displaying result value in visor
 function clickEqualsBtn() {
   equalsBtn.addEventListener("click", () => {
-    currentOperation.num2 = Number(display.textContent);
+    currentOperation.num2 = parseFloat(display.textContent);
     display.textContent = operate(
       currentOperation.num1,
       currentOperation.operator,

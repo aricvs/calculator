@@ -5,6 +5,7 @@ const operatorBtns = document.querySelectorAll(".operator");
 const equalsBtn = document.querySelector(".equal");
 const clearBtn = document.querySelector(".clear");
 
+// basic operation functions
 function add(num1, num2) {
   return num1 + num2;
 }
@@ -24,6 +25,7 @@ function divide(num1, num2) {
   return num1 / num2;
 }
 
+// function to execute the desired operation with two numbers and an operator in between
 function operate(num1, operator, num2) {
   if (operator === "+") {
     return add(num1, num2);
@@ -39,7 +41,7 @@ function operate(num1, operator, num2) {
   }
 }
 
-// Makes clicked digits show up on the display, converts them to numbers as well
+// makes clicked digits show up on the display, converts them to numbers as well
 // TODO: limit amount of digits to not overflow display size
 function clickDigitBtn() {
   digitBtns.forEach((digit) => {

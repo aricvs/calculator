@@ -7,7 +7,7 @@ const clearBtn = document.querySelector(".clear");
 
 // global variables used in operations
 let currentNumber;
-let operator;
+let currentOperator = "";
 let nextNumber;
 
 // basic operation functions
@@ -56,4 +56,15 @@ function clickDigitBtn() {
   });
 }
 
+function clickOperatorBtn() {
+  operatorBtns.forEach((operator) => {
+    operator.addEventListener("click", () => {
+      if (currentOperator !== "") {
+        currentNumber = operate(currentNumber, currentOperator, nextNumber);
+      }
+    });
+  });
+}
+
 clickDigitBtn();
+clickOperatorBtn();

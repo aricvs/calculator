@@ -53,4 +53,19 @@ function clickDigitBtn() {
   });
 }
 
+// TODO: when operator is clicked, log display to number 1
+
+function clickOperatorBtn() {
+  operatorBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!currentOperation.num1) {
+        currentOperation.num1 = Number(display.textContent);
+        currentOperation.operator = btn.textContent;
+        display.textContent = "";
+      }
+    });
+  });
+}
+
 clickDigitBtn();
+clickOperatorBtn();

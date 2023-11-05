@@ -2,7 +2,7 @@
 const display = document.querySelector(".display-text");
 const digitBtns = document.querySelectorAll(".digit");
 const operatorBtns = document.querySelectorAll(".operator");
-const equalsBtn = document.querySelector(".equal");
+const equalsBtn = document.querySelector(".equals");
 const clearBtn = document.querySelector(".clear");
 
 // global variables used in operations
@@ -70,5 +70,13 @@ function clickOperatorBtn() {
   });
 }
 
+function clickEqualsBtn() {
+  equalsBtn.addEventListener("click", () => {
+    currentNumber = operate(currentNumber, currentOperator, nextNumber);
+    display.textContent = currentNumber;
+  });
+}
+
 clickDigitBtn();
 clickOperatorBtn();
+clickEqualsBtn();

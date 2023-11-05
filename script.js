@@ -53,24 +53,9 @@ function clickDigitBtn() {
   });
 }
 
-// check if operator is empty, if yes, then assign displayt value to num1 and wait for equals to be run, else operate the current values
-// TODO: fix chain operations
 function clickOperatorBtn() {
   operatorBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (currentOperation.num2 === null) {
-        currentOperation.num1 = Number(display.textContent);
-        currentOperation.operator = btn.textContent;
-        display.textContent = "";
-      } else {
-        display.textContent = operate(
-          currentOperation.num1,
-          currentOperation.operator,
-          currentOperation.num2
-        );
-        currentOperation.operator = btn.textContent;
-      }
-    });
+    btn.addEventListener("click", () => {});
   });
 }
 

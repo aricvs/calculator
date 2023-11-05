@@ -67,5 +67,17 @@ function clickOperatorBtn() {
   });
 }
 
+function clickEqualsBtn() {
+  equalsBtn.addEventListener("click", () => {
+    currentOperation.num2 = Number(display.textContent);
+    display.textContent = operate(
+      currentOperation.num1,
+      currentOperation.operator,
+      currentOperation.num2
+    );
+  });
+}
+
 clickDigitBtn();
 clickOperatorBtn();
+clickEqualsBtn();

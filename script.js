@@ -63,6 +63,8 @@ function clickOperatorBtn() {
       if (currentOperator !== "") {
         currentNumber = operate(currentNumber, currentOperator, nextNumber);
         display.textContent = currentNumber;
+      } else {
+        currentOperator = operator.textContent;
       }
     });
   });

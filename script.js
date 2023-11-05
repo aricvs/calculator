@@ -70,13 +70,5 @@ function clickOperatorBtn() {
   });
 }
 
-function clickEqualsBtn() {
-  equalsBtn.addEventListener("click", () => {
-    currentNumber = operate(currentNumber, currentOperator, nextNumber);
-    display.textContent = currentNumber;
-  });
-}
-
 clickDigitBtn();
 clickOperatorBtn();
-clickEqualsBtn();

@@ -5,10 +5,6 @@ const operatorBtns = document.querySelectorAll(".operator");
 const equalsBtn = document.querySelector(".equals");
 const clearBtn = document.querySelector(".clear");
 
-// global arrays of operations and numbers
-let allNumbers = [];
-let allOperators = [];
-
 // basic operation functions
 function add(num1, num2) {
   return num1 + num2;
@@ -44,7 +40,3 @@ function operate(num1, operator, num2) {
     return divide(num1, num2);
   }
 }
-
-// TODO:
-// make it so that if the number element in the num array gets operated with the next operator element in the op array,
-// then next number with next operator, and so on

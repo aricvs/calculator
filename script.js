@@ -48,7 +48,9 @@ function operate(num1, operator, num2) {
 function clickDigitBtn() {
   digitBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      display.textContent += btn.textContent;
+      if (display.textContent.length < 13) {
+        display.textContent += btn.textContent;
+      }
     });
   });
 }

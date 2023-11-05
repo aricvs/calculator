@@ -86,6 +86,15 @@ function clickEqualsBtn() {
   });
 }
 
+// clears display and resets global variables
+function clickClearBtn() {
+  clearBtn.addEventListener("click", () => {
+    currentOperation = { num1: null, operator: null, num2: null };
+    display.textContent = "";
+  });
+}
+
 clickDigitBtn();
 clickOperatorBtn();
 clickEqualsBtn();
+clickClearBtn();

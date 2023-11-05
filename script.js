@@ -38,3 +38,15 @@ function operate(num1, operator, num2) {
     return divide(num1, num2);
   }
 }
+
+// Makes clicked digits show up on the display, converts them to numbers as well
+// TODO: limit amount of digits to not overflow display size
+function clickDigitBtn() {
+  digitBtns.forEach((digit) => {
+    digit.addEventListener("click", () => {
+      display.textContent += Number(digit.textContent);
+    });
+  });
+}
+
+clickDigitBtn();

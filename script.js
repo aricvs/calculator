@@ -56,11 +56,13 @@ function clickDigitBtn() {
   });
 }
 
+// function to choose the desired operator, if an operator has been chosen previously, it will run the cached operation
 function clickOperatorBtn() {
   operatorBtns.forEach((operator) => {
     operator.addEventListener("click", () => {
       if (currentOperator !== "") {
         currentNumber = operate(currentNumber, currentOperator, nextNumber);
+        display.textContent = currentNumber;
       }
     });
   });

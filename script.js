@@ -9,6 +9,7 @@ const clearBtn = document.querySelector(".clear");
 let currentNumber;
 let currentOperator = "";
 let nextNumber;
+let numberToggle = "current";
 
 // basic operation functions
 function add(num1, num2) {
@@ -53,21 +54,29 @@ function operate(num1, operator, num2) {
 function clickDigitBtn() {
   digitBtns.forEach((digit) => {
     digit.addEventListener("click", () => {
-      display.textContent += Number(digit.textContent);
-      currentNumber = Number(display.textContent);
+      if (numberToggle === "current") {
+        display.textContent += Number(digit.textContent);
+        currentNumber = Number(display.textContent);
+      } else {
+        display.textContent = "";
+        display.textContent += Number(digit.textContent);
+        nextNumber = Number(display.textContent);
+      }
     });
   });
 }
 
-// function to choose the desired operator, if an operator has been chosen previously, it will run the cached operation
+// function to choose the desired operator
 function clickOperatorBtn() {
   operatorBtns.forEach((operator) => {
     operator.addEventListener("click", () => {
+      // if an operator has been chosen previously, it will run the cached operation
       if (currentOperator !== "") {
         currentNumber = operate(currentNumber, currentOperator, nextNumber);
         display.textContent = currentNumber;
       } else {
         currentOperator = operator.textContent;
+        numberToggle = "next";
       }
     });
   });

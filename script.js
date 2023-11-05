@@ -53,9 +53,14 @@ function clickDigitBtn() {
   });
 }
 
+// assigns display number to num1 and clears the display
 function clickOperatorBtn() {
   operatorBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {});
+    btn.addEventListener("click", () => {
+      currentOperation.operator = btn.textContent;
+      currentOperation.num1 = Number(display.textContent);
+      display.textContent = "";
+    });
   });
 }
 
